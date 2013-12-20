@@ -22,6 +22,7 @@ Qt binary versions.
 
 mkdir -p %{buildroot}%{_mandir}/man1
 install -m644 doc/qtchooser.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_sysconfdir}/xdg/qtchooser
 
 %files
 %defattr(-,root,root,-)
@@ -60,4 +61,5 @@ install -m644 doc/qtchooser.1 %{buildroot}%{_mandir}/man1
 %{_bindir}/uic3
 %{_bindir}/xmlpatterns
 %{_bindir}/xmlpatternsvalidator
+%{_sysconfdir}/xdg/qtchooser
 %{_mandir}/man1/qtchooser.1*
