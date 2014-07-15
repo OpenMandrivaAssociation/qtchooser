@@ -1,18 +1,18 @@
-Name: qtchooser
-Version: 39
-Release: 3
-Summary: Wrapper used to select between Qt binary versions
-Group: System/Libraries
-License: GPLv2+
-Url: http://www.qt-project.org
-Source0: http://macieira.org/qtchooser/%{name}-%{version}-g4717841.tar.xz
+Name:		qtchooser
+Version:	39
+Release:	3
+Summary:	Wrapper used to select between Qt binary versions
+Group:		System/Libraries
+License:	GPLv2+
+Url:		http://www.qt-project.org
+Source0:	http://macieira.org/qtchooser/%{name}-%{version}-g4717841.tar.xz
 
 %description
 The qtchooser package contains a wrapper used to select between
 Qt binary versions.
 
 %prep
-%setup -q -n %{name}
+%setup -qn %{name}
 
 %build
 %make LFLAGS="%{optflags}" CXXFLAGS="%{optflags}"
@@ -25,7 +25,6 @@ install -m644 doc/qtchooser.1 %{buildroot}%{_mandir}/man1
 mkdir -p %{buildroot}%{_sysconfdir}/xdg/qtchooser
 
 %files
-%defattr(-,root,root,-)
 %{_bindir}/assistant
 %{_bindir}/designer
 %{_bindir}/lconvert
@@ -63,3 +62,4 @@ mkdir -p %{buildroot}%{_sysconfdir}/xdg/qtchooser
 %{_bindir}/xmlpatternsvalidator
 %{_sysconfdir}/xdg/qtchooser
 %{_mandir}/man1/qtchooser.1*
+
