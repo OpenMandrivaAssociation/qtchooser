@@ -1,6 +1,6 @@
 Name:		qtchooser
 Version:	39
-Release:	4
+Release:	5
 Summary:	Wrapper used to select between Qt binary versions
 Group:		System/Libraries
 License:	GPLv2+
