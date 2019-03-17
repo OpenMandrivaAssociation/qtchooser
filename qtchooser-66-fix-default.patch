@@ -1,0 +1,18 @@
+diff -up qtchooser-66/src/qtchooser/main.cpp.omv~ qtchooser-66/src/qtchooser/main.cpp
+--- qtchooser-66/src/qtchooser/main.cpp.omv~	2019-03-17 22:00:37.016840066 +0000
++++ qtchooser-66/src/qtchooser/main.cpp	2019-03-17 22:01:24.166892421 +0000
+@@ -501,11 +501,11 @@ Sdk ToolWrapper::iterateSdks(const strin
+ 
+             seenNames.insert(d->d_name);
+             if (targetTool.empty()) {
+-                sdk.name = d->d_name;
+-                sdk.name.resize(fnamelen + 1 - sizeof confSuffix);
+-            } else {
+                 // To make the check in matchSdk() succeed
+                 sdk.name = "default";
++            } else {
++                sdk.name = d->d_name;
++                sdk.name.resize(fnamelen + 1 - sizeof confSuffix);
+             }
+             sdk.configFile = path + PATH_SEP + d->d_name;
+             if (visit && visit(targetSdk, sdk)) {

@@ -1,18 +1,19 @@
 Name:		qtchooser
-Version:	39
-Release:	6
+Version:	66
+Release:	1
 Summary:	Wrapper used to select between Qt binary versions
 Group:		System/Libraries
 License:	GPLv2+
 Url:		http://www.qt-project.org
-Source0:	http://macieira.org/qtchooser/%{name}-%{version}-g4717841.tar.xz
+Source0:	http://download.qt.io/official_releases/qtchooser/qtchooser-%{version}.tar.xz
+Patch0:		qtchooser-66-fix-default.patch
 
 %description
 The qtchooser package contains a wrapper used to select between
 Qt binary versions.
 
 %prep
-%setup -qn %{name}
+%autosetup -p1
 
 %build
 %make LFLAGS="%{optflags}" CXXFLAGS="%{optflags}"
@@ -40,26 +41,37 @@ mkdir -p %{buildroot}%{_sysconfdir}/xdg/qtchooser
 %{_bindir}/qdbusxml2cpp
 %{_bindir}/qdoc
 %{_bindir}/qdoc3
-%{_bindir}/qglinfo
+%{_bindir}/qgltf
 %{_bindir}/qhelpconverter
 %{_bindir}/qhelpgenerator
+%{_bindir}/qlalr
 %{_bindir}/qmake
 %{_bindir}/qml
 %{_bindir}/qml1plugindump
 %{_bindir}/qmlbundle
+%{_bindir}/qmlcachegen
+%{_bindir}/qmleasing
+%{_bindir}/qmlimportscanner
+%{_bindir}/qmljs
+%{_bindir}/qmllint
 %{_bindir}/qmlmin
 %{_bindir}/qmlplugindump
 %{_bindir}/qmlprofiler
 %{_bindir}/qmlscene
 %{_bindir}/qmltestrunner
 %{_bindir}/qmlviewer
+%{_bindir}/qtattributionsscanner
 %{_bindir}/qtchooser
 %{_bindir}/qtconfig
+%{_bindir}/qtdiag
+%{_bindir}/qtpaths
+%{_bindir}/qtplugininfo
+%{_bindir}/qvkgen
 %{_bindir}/rcc
 %{_bindir}/uic
 %{_bindir}/uic3
 %{_bindir}/xmlpatterns
 %{_bindir}/xmlpatternsvalidator
+%{_bindir}/repc
 %{_sysconfdir}/xdg/qtchooser
 %{_mandir}/man1/qtchooser.1*
-
