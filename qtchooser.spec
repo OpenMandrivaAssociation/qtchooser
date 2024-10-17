@@ -4,7 +4,7 @@ Release:	3
 Summary:	Wrapper used to select between Qt binary versions
 Group:		System/Libraries
 License:	GPLv2+
-Url:		http://www.qt-project.org
+Url:		https://www.qt-project.org
 Source0:	http://download.qt.io/official_releases/qtchooser/qtchooser-%{version}.tar.xz
 Patch0:		qtchooser-66-fix-default.patch
 
