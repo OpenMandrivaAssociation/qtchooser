@@ -8,6 +8,7 @@ Url:		https://www.qt-project.org
 Source0:	http://download.qt.io/official_releases/qtchooser/qtchooser-%{version}.tar.xz
 Patch0:		qtchooser-66-fix-default.patch
 
+BuildRequires:	make
 %description
 The qtchooser package contains a wrapper used to select between
 Qt binary versions.
